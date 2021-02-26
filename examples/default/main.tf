@@ -23,12 +23,14 @@ module "azurerm_subnet" {
 
 module "azurerm_public_ip" {
   source              = "robertdebock/azurerm_public_ip/azurerm"
+  version             = "1.0.0"
   name                = "test_public_ip"
   resource_group_name = module.azurerm_resource_group.name
 }
 
 module "azurerm_network_security_group" {
   source              = "robertdebock/azurerm_network_security_group/azurerm"
+  version             = "1.0.0"
   name                = "test_network_security_group"
   resource_group_name = module.azurerm_resource_group.name
 }
